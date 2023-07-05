@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WillianSz</title>
+  <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      overflow: hidden;
+    }
+
+    #video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #video-container iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    #video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+
+    #content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: Varela;
+      font-size: 36px;
+      text-align: center;
+      z-index: 1;
+      font-weight: bold;
+    }
+
+    #button {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #button a {
+      padding: 10px 20px;
+      background: white;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    #image {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #image img {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="video-container">
+    <iframe id="video-frame" src="https://www.youtube.com/embed/qbWqXKN3m3c?autoplay=0&loop=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+  <div id="video-overlay"></div>
+
+  <div id="content">
+    <h1>WILLIAN SZARNIK DURÃES PEREIRA</h1>
+    <div id="button">
+      <a href="/error.html">ERROR!</a>
+    </div>
+    <div id="image">
+      <a href="https://imgflip.com/i/7rj83f"><img src="https://i.imgflip.com/7rj83f.jpg" title="made at imgflip.com"/></a>
+      <div><a href="/7rj83f.jpg"></a></div>
+    </div>
+  </div>
+
+  <script>
+    // Iniciar o vídeo assim que a página for carregada
+    window.onload = function() {
+      var videoFrame = document.getElementById('video-frame');
+      videoFrame.src += "&autoplay=1";
+    };
+  </script>
+</body>
+</html>
